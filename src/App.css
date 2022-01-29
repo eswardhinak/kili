@@ -1,0 +1,82 @@
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.button-row-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nudge-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  max-width: 270px;
+}
+
+.card {
+  cursor: pointer !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.card-body {
+  padding-top: 0px !important;
+}
+
+.card-header {
+  padding: .2em !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .modal-content {
+    background-color: #171926 !important;
+  }
+
+  .nudge-card {
+    background-color: #1C203B;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .modal-content {
+    background-color: #ffffff !important;
+  }
+
+  .nudge-card {
+    background-color: #ffffff;
+  }
+}
+
+.scrollable-list-container {
+  flex-grow: 1;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 8px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #99d4fc;
+  border: transparent;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #99d4fc;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

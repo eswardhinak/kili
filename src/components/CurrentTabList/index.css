@@ -1,0 +1,56 @@
+.current-tabs-container {
+  margin-top: 55px;
+  width: 310px;
+  margin-left: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
+  height: 440px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .current-tabs-container {
+    background-color: #1C203B;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .current-tabs-container {
+    background-color: #ffffff;
+  }
+}
+
+.current-tabs-header {
+  border-radius: 10px 10px 0px 0px;
+  padding: 2px;
+  background-color: #3495f8;
+}
+
+.current-tabs-body {
+  padding-right: 8px;
+  padding-bottom: 6px;
+  padding-left: 8px;
+  height: 88%;
+}
+
+.current-tabs-plus-icon {
+  cursor: pointer;
+  background-color: transparent;
+  height: 38px;
+  width: 38px;
+  padding: 7px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.current-tabs-plus-icon:focus {
+  border: 1px solid #ccc;
+}
+
+.current-tabs-plus-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1)
+}
+
+.current-tabs-plus-icon:active {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2)
+}

@@ -1,0 +1,78 @@
+@media (prefers-color-scheme: dark) {
+  .flow-search {
+    font-family: 'BryantPro';
+    font-size: 1.25em;
+    outline: none;
+    width: 250px;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    color: white;
+    cursor: text;
+    background-color: transparent;
+
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    border-bottom: 3px solid #68b4ff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .flow-search {
+    font-family: 'BryantPro';
+    font-size: 1.25em;
+    outline: none;
+    width: 250px;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    color: #707070;
+    cursor: text;
+    background-color: transparent;
+
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    border-bottom: 3px solid #68b4ff;
+  }
+}
+
+.search-bar-container {
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.search-icon {
+  height: 25px;
+  width: 25px;
+}
+
+.grid-icon, .list-icon {
+  height: 45px;
+  width: 45px;
+  padding: 2px 5px 2px 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.grid-icon:hover, .list-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.no-flows-image {
+  align-self: center;
+  margin-top: 25px;
+}
+
+.flow-list-container {
+  display: flex;
+  padding-left: 10px;
+  height: 500px;
+  overflow-y: scroll;
+  width: 680px;
+}
+
+::placeholder {
+  color: #ccc;
+  opacity: 1; /* Firefox */
+}

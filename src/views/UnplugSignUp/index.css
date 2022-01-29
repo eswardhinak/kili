@@ -1,0 +1,50 @@
+.signup-container {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-input {
+  font-family: 'BryantPro';
+  margin-right: 16px;
+  font-size: 2em;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: transparent;
+  outline: none;
+  width: 400px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .signup-container {
+    background-color: #1C203B;
+  }
+
+  .signup-input {
+    border-color: white;
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .signup-container {
+    background-color: #ffffff;
+  }
+
+  .signup-input {
+    border-color: black;
+    color: #707070;
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

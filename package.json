@@ -1,0 +1,68 @@
+{
+  "name": "flow-unplug-extension",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/react-transition-group": "^4.4.0",
+    "amplitude-js": "^6.1.0-debug-cookie.1",
+    "bootstrap": "^4.5.0",
+    "classnames": "^2.2.6",
+    "evergreen-ui": "^4.27.4",
+    "glob": "^7.1.6",
+    "lodash": "^4.17.19",
+    "react": "^16.13.1",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-bootstrap": "^1.1.1",
+    "react-dom": "^16.13.1",
+    "react-highlight-words": "^0.17.0",
+    "react-redux": "^7.2.0",
+    "react-scripts": "^3.4.3",
+    "react-shepherd": "^3.3.0",
+    "react-toastify": "^6.0.8",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "shepherd.js": "^8.0.2",
+    "styled-components": "^4.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "prebuild": "rimraf build",
+    "build-dev:chromium": "cp public/manifest-chromium.json public/manifest.json && source .dev.env && source .public.env && npm-run-all build:*",
+    "build-dev:firefox": "cp public/manifest-firefox.json public/manifest.json && source .dev.env && source .public.env && npm-run-all build:*",
+    "build-prod:chromium": "cp public/manifest-chromium.json public/manifest.json && source .prod.env && source .public.env && npm-run-all build:*",
+    "build-prod:firefox": "cp public/manifest-firefox.json public/manifest.json && source .prod.env && source .public.env && npm-run-all build:*",
+    "build:app": "INLINE_RUNTIME_CHUNK=false react-scripts build && node ./addPreloadFonts.js",
+    "build:bg": "webpack --mode production ./src/background_script.js --output ./build/background_script.js",
+    "build:popup": "webpack --mode production ./src/popup.js --output ./build/popup.js && cp ./src/popup.html ./build/popup.html",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "env": {
+      "browser": true,
+      "webextensions": true
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "redux-devtools": "^3.5.0",
+    "rimraf": "^3.0.2",
+    "webpack-cli": "^3.3.11"
+  }
+}

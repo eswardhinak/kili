@@ -1,0 +1,10 @@
+.permission-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.permission-description {
+  align-self: flex-start;
+  flex-grow: 1;
+}
