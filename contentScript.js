@@ -26,7 +26,6 @@ let tamilDictionary =
 
 let englishWords = Object.keys(tamilDictionary);
 
-let englishWordsSet = new Set(englishWords);
 
 
 shuffle(englishWords);
@@ -52,7 +51,6 @@ var singleMatchOnly = {
 
 for (var i = 0; i < englishWords.length; i++) {
   var word = englishWords[i];
-  console.log(word);
   if (numMatches > MAX_MATCHES_ON_PAGE) {
     break;
   }
@@ -63,7 +61,6 @@ for (var i = 0; i < englishWords.length; i++) {
 const matches = document.querySelectorAll(".doveMatch");
 matches.forEach((match) => {
   let cleanedWord = match.innerText.toLowerCase();
-  console.log(cleanedWord);
   match.setAttribute("data-bs-toggle", "popover");
   match.setAttribute("data-bs-trigger", "hover");
   match.setAttribute("title", tamilDictionary[cleanedWord]["tamil"]);
@@ -71,7 +68,6 @@ matches.forEach((match) => {
 });
 
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-console.log(popoverTriggerList);
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 
