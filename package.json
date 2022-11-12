@@ -1,5 +1,5 @@
 {
-  "name": "flow-unplug-extension",
+  "name": "kili",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,8 +32,7 @@
     "prebuild": "rimraf build",
     "build-dev:chromium": "cp public/manifest-chromium.json public/manifest.json && source .dev.env && source .public.env && npm-run-all build:*",
     "build-dev:firefox": "cp public/manifest-firefox.json public/manifest.json && source .dev.env && source .public.env && npm-run-all build:*",
-    "build-prod:chromium": "cp public/manifest-chromium.json public/manifest.json && source .prod.env && source .public.env && npm-run-all build:*",
-    "build-prod:firefox": "cp public/manifest-firefox.json public/manifest.json && source .prod.env && source .public.env && npm-run-all build:*",
+    "build-prod:chromium": "cp public/manifest-chromium.json public/manifest.json && npm-run-all build:*",
     "build:app": "INLINE_RUNTIME_CHUNK=false react-scripts build && node ./addPreloadFonts.js",
     "build:bg": "webpack --mode production ./src/background_script.js --output ./build/background_script.js",
     "build:popup": "webpack --mode production ./src/popup.js --output ./build/popup.js && cp ./src/popup.html ./build/popup.html",
