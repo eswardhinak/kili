@@ -1,5 +1,4 @@
-// unscaleable as the size of the dictionary grows lol
-
+// Doesn't scale well with the size of the dictionary
 
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
@@ -18,6 +17,8 @@ function shuffle(array) {
   }
   return array;
 }
+
+
 
 const MAX_MATCHES_ON_PAGE = 5;
 
@@ -46,11 +47,6 @@ var singleMatchOnly = {
   }
 }
 
-/* @Todo: 
-      1. algorithm 1: loop through dictionary to find matches on the page
-      2. algorithm 2: loop through words in corpus, find them in dictionary, then highlight with translation
-
-*/
 
 for (var i = 0; i < englishWords.length; i++) {
   var word = englishWords[i];
